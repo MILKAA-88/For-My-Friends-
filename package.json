@@ -1,10 +1,12 @@
-{
+{si tu recopie sa : {
   "name": "NO-Name",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "main.cjs",
   "scripts": {
+"dev": "cross-env NODE_ENV=development concurrently "vite" "wait-on http://localhost:5173/ && electron ."",
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "dist": "npm run build && electron-builder"
   },
   "devDependencies": {
     "electron": "^29.0.0",
@@ -13,9 +15,13 @@
   "build": {
     "appId": "com.milkaa.noname",
     "productName": "NO-Name",
+"files": [
+            "dist/*/",
+            "main.cjs"
+        ],
     "win": {
       "target": "nsis",
       "icon": "icon.ico"
     }
   }
-} 
+}} 
