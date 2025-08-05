@@ -15,9 +15,10 @@ function createWindow() {
     }
   });
   
-  // win.setMenu(null); // <- Commenté ou supprimé pour afficher le menu
   win.loadFile('index.html');
-  // win.webContents.openDevTools(); 
+  
+  // Pour ouvrir les DevTools
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
