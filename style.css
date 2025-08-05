@@ -1,0 +1,22 @@
+body {
+  background: #7EA0B7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+video#rickroll {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Empêche tout clic droit ou pause */
+}
