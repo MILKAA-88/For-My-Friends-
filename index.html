@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MILKAA</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
-  <video autoplay loop playsinline id="rickroll">
-    <source src="rickroll.mp4" type="video/mp4" />
-    Ton navigateur ne supporte pas la vidéo.
-  </video>
-  <h1>Salut !</h1>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <div id="start-screen">
+    <h1>Initialisation de MIKO AI...</h1>
+    <button id="start-btn">Démarrer</button>
+  </div>
+  <div id="video-container" style="display: none;">
+    <video id="rickroll" autoplay loop playsinline>
+      <source src="rickroll.mp4" type="video/mp4" />
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
+  </div>
+  <h1> Attends 10s</h1>
+  <button id="exit-btn" style="display:none; position: fixed; top: 20px; right: 20px; padding: 10px 20px; font-size: 16px; z-index: 1000; cursor: pointer;">
+  Quitter
+</button>
   <script src="renderer.js"></script>
 </body>
-</html>
