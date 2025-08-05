@@ -1,6 +1,69 @@
 body {
-  background: ;
+  background: black;
+  color: white;
 }
+
 h1 {
   text-align: center;
+}
+
+.apple {
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.apple:hover {
+  animation: tremble 0.3s infinite;
+  cursor: pointer;
+}
+
+/* Définition de l’animation tremble */
+@keyframes tremble {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-2deg); }
+  40% { transform: translate(-2px, -2px) rotate(2deg); }
+  60% { transform: translate(2px, 2px) rotate(-2deg); }
+  80% { transform: translate(2px, -2px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Tes boutons */
+
+.oui {
+  background-color: #5CB85C;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 150px;
+  padding: 13px 10px;
+}
+
+.oui:hover {
+  background-color: #4CAE4C;
+}
+
+.non {
+  background-color: #D9534F;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 10px auto; 
+  width: 150px; 
+  padding: 13px 10px;
+}
+
+.non:hover {
+  background-color: #C9302C;
 }

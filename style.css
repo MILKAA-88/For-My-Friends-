@@ -27,3 +27,13 @@ button {
   margin-top: 1rem;
   cursor: pointer;
 }
+.BTNV {
+  color: white;
+  background: #D46F4D;
+  border-radius: 20px;
+}
+.Exit {
+  color: white;
+  background: black;
+  border-radius: 15px;
+}
