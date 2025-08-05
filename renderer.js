@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    // Affiche le bouton Quitter après 17 secondes (17000 ms)
+    // Affiche le bouton Quitter après 10 secondes
     setTimeout(() => {
       exitBtn.style.display = "block";
     }, 10000);
@@ -32,9 +32,30 @@ window.addEventListener('DOMContentLoaded', () => {
   
   // Clique sur le bouton Quitter : redirection
   exitBtn.addEventListener("click", () => {
-    window.location.href = "2.html"; // Change la cible ici
+    window.location.href = "2.html";
   });
   
+  // ✅ Code secret TOUJOURS actif
+  let sequence = "";
+  const codeSecret = "milkaa";
+  
+  window.addEventListener("keydown", (event) => {
+    sequence += event.key.toLowerCase();
+    
+    if (sequence.length > codeSecret.length) {
+      sequence = sequence.slice(-codeSecret.length);
+    }
+    
+    if (sequence === codeSecret) {
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch((err) => {
+          console.error("Erreur en quittant le plein écran :", err);
+        });
+      }
+    }
+  });
+  
+  // Lancer selon contexte
   if (isElectron) {
     lancerVideo();
   } else {
