@@ -15,9 +15,13 @@ function createWindow() {
     }
   });
   
-  win.setMenu(null);
+  // win.setMenu(null); // <- Commenté ou supprimé pour afficher le menu
   win.loadFile('index.html');
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools(); 
 }
 
 app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit();
+});
