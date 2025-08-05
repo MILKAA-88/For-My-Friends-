@@ -5,3 +5,8 @@ body {
 h1 {
   text-align: center;
 }
+.SMILE {
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+}

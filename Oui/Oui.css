@@ -1,0 +1,20 @@
+.Michou {
+  height: 400px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+}
+h2 {
+  text-align: center;
+}
+.No-play {
+  border-radius: 19px;
+  padding: 19px 19px;
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 150px;
+}
