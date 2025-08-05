@@ -1,31 +1,6 @@
-{
-  "name": "NO-Name",
-  "version": "1.0.0",
-  "main": "main.cjs",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
-    "start": "electron .",
-    "build": "electron-builder",
-    "dist": "npm run build && electron-builder"
-  },
-  "devDependencies": {
-    "concurrently": "^9.2.0",
-    "cross-env": "^10.0.0",
-    "electron": "^29.0.0",
-    "electron-builder": "^24.13.2",
-    "wait-on": "^8.0.4"
-  },
-  "build": {
-    "appId": "com.milkaa.noname",
-    "productName": "NO-Name",
-    "files": [
-      "dist/*/",
-      "main.cjs"
-    ],
-    "win": {
-      "target": "nsis",
-      "icon": "icon.ico"
-    }
-  }
-}
-``` 
+"scripts": {
+  "dev": "cross-env NODE_ENV=development concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+  "start": "electron .",
+  "build": "electron-builder",
+  "dist": "npm run build && electron-builder"
+},
