@@ -10,8 +10,8 @@ function createWindow() {
     frame: false,
     alwaysOnTop: true,
     webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   });
   
